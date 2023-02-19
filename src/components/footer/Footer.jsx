@@ -13,8 +13,8 @@ function Footer() {
             <li className="fListItem">Hotels</li>
           </ul>
           <ul className='fList'>
-            <li className="fListItem">Countries</li>
-            <li className="fListItem">Regions</li>
+            <li className="fListItem">Phone Number:</li>
+            <li className="fListItem">Email:</li>
             <li className="fListItem">Cities</li>
             <li className="fListItem">Districts</li>
             <li className="fListItem">Airports</li>
