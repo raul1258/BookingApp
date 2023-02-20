@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 
 function Header({type}) {
   const [openDate, setOpenDate] = useState(false);
+  const [destination, setDestination] = useState("");
+
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -44,7 +46,7 @@ function Header({type}) {
   };
 
   const handleSearch = () => {
-
+    navigate("/hotels", {state: {destination, date, options}})
   }
 
   return (
@@ -86,6 +88,7 @@ function Header({type}) {
               type="text"
               placeholder="Where are you going?"
               className="headerSearchInput"
+              onChange={e=>setDestination(e.target.value)}
             />
           </div>
           <div className="headerSearchItem">
