@@ -1,5 +1,6 @@
-import React from 'react'
-import { useLocation , useState} from 'react-router-dom';
+import { format } from 'date-fns';
+import React, { useState } from 'react'
+import { useLocation} from 'react-router-dom';
 import Header from '../../components/header/Header'
 import Navbar from '../../components/navbar/Navbar'
 import "./list.css";
@@ -20,11 +21,12 @@ function List() {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <label htmlFor="">Destination</label>
+              <label htmlFor="" placeholder={destination}>Destination</label>
               <input type="text" />
             </div>
             <div className="lsItem">
-              <label htmlFor="">Check-in</label>
+              <label htmlFor="">Check-in Date</label>
+                <span> {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(date[0].endDate,"MM/dd/yyyy")}`}</span>
               <input type="text" />
             </div>
           </div>
