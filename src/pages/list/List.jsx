@@ -21,7 +21,7 @@ function List() {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <label htmlFor="" placeholder={destination}>Destination</label>
+              <label htmlFor="">Destination</label>
               <input type="text" />
             </div>
             <div className="lsItem">
